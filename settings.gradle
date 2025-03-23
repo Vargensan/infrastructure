@@ -1,0 +1,20 @@
+pluginManagement {
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+    plugins {
+        id "${lombokPluginId}" version "${lombokPluginVersion}"
+    }
+}
+
+rootProject.name = "infrastructure"
+include("infrastructure-core")
+include("infrastructure-rsql")
+include 'infrastructure-utilities'
+include 'infrastructure-logging'
+include 'infrastructure-api'
+include 'infrastructure-security'
+

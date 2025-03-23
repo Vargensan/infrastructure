@@ -1,0 +1,23 @@
+plugins {
+    id('org.gradle.maven-publish')
+    id('io.freefair.lombok')
+}
+
+dependencies {
+    implementation project(":infrastructure-api")
+    //logging
+    compileOnly group: 'org.slf4j', name: 'slf4j-api', version: slf4jVersion
+
+    //Quarkus
+    compileOnly group: 'io.quarkus', name: 'quarkus-core', version: quarkusVersion
+    compileOnly group: 'io.quarkus', name: 'quarkus-resteasy', version: quarkusVersion
+    compileOnly group: 'io.quarkus', name: 'quarkus-resteasy-jackson', version: quarkusVersion
+    compileOnly group: 'io.quarkus', name: 'quarkus-rest-client', version: quarkusVersion
+    compileOnly group: 'io.quarkus', name: 'quarkus-jackson', version: quarkusVersion
+    compileOnly group: 'io.quarkus', name: 'quarkus-undertow', version: quarkusVersion
+    compileOnly group: 'io.quarkus', name: 'quarkus-smallrye-metrics', version: quarkusVersion
+    compileOnly group: 'io.quarkus', name: 'quarkus-smallrye-openapi', version: quarkusVersion
+
+    implementation group: 'io.jsonwebtoken', name: 'jjwt-api', version: '0.12.3'
+
+}

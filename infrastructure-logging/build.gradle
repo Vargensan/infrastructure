@@ -1,0 +1,17 @@
+plugins {
+    id 'java'
+    id('io.freefair.lombok')
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly group: 'org.slf4j', name: 'slf4j-api', version: slf4jVersion
+
+    compileOnly group: 'io.quarkus', name: 'quarkus-core', version: quarkusVersion
+    compileOnly group: 'io.quarkus', name: 'quarkus-resteasy', version: quarkusVersion
+    compileOnly group: 'io.quarkus', name: 'quarkus-resteasy-jackson', version: quarkusVersion
+
+}

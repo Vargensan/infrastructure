@@ -1,0 +1,4 @@
+plugins {
+    id('org.gradle.maven-publish')
+    id('io.freefair.lombok')
+}
